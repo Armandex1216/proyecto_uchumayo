@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Uchumayo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        .options a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+        }
+
+        .options a:hover {
+            background-color: #1e7e34;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BIENVENIDOS A PROYECTO UCHUMAYO</h1>
+        <!-- Imagen inicial -->
+        <img id="main-image" src="imagen_inicial.jpg" alt="Imagen inicial">
+        <br>
+        <!-- Botón de comenzar -->
+        <button id="start-button">Comenzar</button>
+
+        <!-- Opciones que aparecen después de pulsar "Comenzar" -->
+        <div id="options" class="hidden">
+            <div class="options">
+                <!-- Enlaces directos al Excel y al Informe -->
+                <a href="reporte.xlsx" target="_blank">VER EXCEL DE REPORTE</a>
+                <a href="informe.pdf" target="_blank">VER INFORME</a>
+            </div>
+            <!-- Imagen adicional -->
+            <img id="second-image" src="imagen_secundaria.jpg" alt="Imagen secundaria">
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('start-button');
+        const options = document.getElementById('options');
+
+        // Mostrar opciones al hacer clic en "Comenzar"
+        startButton.addEventListener('click', () => {
+            options.classList.remove('hidden');
+            startButton.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
